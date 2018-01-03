@@ -45,7 +45,7 @@
 
 	if(file_exists("googleMapsKey.txt")){
 		$googleMapsAPI = trim(file_get_contents("googleMapsKey.txt"));
-		if($googleMapsAPI=="AIzaSyBPKxs-T-4G8xmWCcFozfb-NUYPX8av3pc" || $googleMapsAPI==""){
+		if($googleMapsAPI=="XXXXXX" || $googleMapsAPI==""){
 			echo "<span style='color:red;font-size:1.6em;font-weight:bold'>Before you start this setup, it is necessary to get the Google Maps API key.</span><br><br>";
 			echo "Go to https://developers.google.com/maps/documentation/javascript/get-api-key and create a new Browser API key. Make sure that for the 'referrers' you specify your domain, for example:<br><br>For meteotemplate.com I added these two referrers:<br>- *meteotemplate.com/*<br>- www.meteotemplate.com/*<br><br>This is so that your key can only be used on your domain. Then open the file 'googleMapsKey.txt' in the same directory of the template as this setup.php. Replace the XXXXXXX with your API key, save changes, upload the saved text file to your server to this install directory and then run this setup again. Also remember that the changes might take up to 5 minutes to have effect.<br><br>";
 
